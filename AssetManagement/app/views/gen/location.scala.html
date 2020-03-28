@@ -1,0 +1,11 @@
+@(locationList: List[Location]) @front_frame(TableInfoReader.getTableComment("Location"), "LocationApp", "LocationController") {
+    @for(location <- locationList) {
+        <ul>
+            <li>@TableInfoReader.getFieldComment("Location", "id"): @location.id</li>
+            <li>@TableInfoReader.getFieldComment("Location", "name"): @location.name</li>
+            <li>@TableInfoReader.getFieldComment("Location", "lastUpdateTime"): @LyLib.Utils.DateUtil.Date2Str(location.lastUpdateTime)</li>
+            <li>@TableInfoReader.getFieldComment("Location", "createdAt"): @LyLib.Utils.DateUtil.Date2Str(location.createdAt)</li>
+            <li>@TableInfoReader.getFieldComment("Location", "comment"): @location.comment</li>
+        </ul>
+    }
+}

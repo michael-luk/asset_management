@@ -1,0 +1,12 @@
+@(barcodeList: List[Barcode]) @front_frame(TableInfoReader.getTableComment("Barcode"), "BarcodeApp", "BarcodeController") {
+    @for(barcode <- barcodeList) {
+        <ul>
+            <li>@TableInfoReader.getFieldComment("Barcode", "id"): @barcode.id</li>
+            <li>@TableInfoReader.getFieldComment("Barcode", "name"): @barcode.name</li>
+            <li>@TableInfoReader.getFieldComment("Barcode", "images"): @barcode.images</li>
+            <li>@TableInfoReader.getFieldComment("Barcode", "lastUpdateTime"): @LyLib.Utils.DateUtil.Date2Str(barcode.lastUpdateTime)</li>
+            <li>@TableInfoReader.getFieldComment("Barcode", "createdAt"): @LyLib.Utils.DateUtil.Date2Str(barcode.createdAt)</li>
+            <li>@TableInfoReader.getFieldComment("Barcode", "comment"): @barcode.comment</li>
+        </ul>
+    }
+}

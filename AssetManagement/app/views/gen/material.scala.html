@@ -1,0 +1,15 @@
+@(materialList: List[Material]) @front_frame(TableInfoReader.getTableComment("Material"), "MaterialApp", "MaterialController") {
+    @for(material <- materialList) {
+        <ul>
+            <li>@TableInfoReader.getFieldComment("Material", "id"): @material.id</li>
+            <li>@TableInfoReader.getFieldComment("Material", "name"): @material.name</li>
+            <li>@TableInfoReader.getFieldComment("Material", "content"): @material.content</li>
+            <li>@TableInfoReader.getFieldComment("Material", "quantity"): @material.quantity</li>
+            <li>@TableInfoReader.getFieldComment("Material", "price"): @material.price</li>
+            <li>@TableInfoReader.getFieldComment("Material", "status"): @EnumInfoReader.getEnumName("Material", "status", material.status)</li>
+            <li>@TableInfoReader.getFieldComment("Material", "lastUpdateTime"): @LyLib.Utils.DateUtil.Date2Str(material.lastUpdateTime)</li>
+            <li>@TableInfoReader.getFieldComment("Material", "createdAt"): @LyLib.Utils.DateUtil.Date2Str(material.createdAt)</li>
+            <li>@TableInfoReader.getFieldComment("Material", "comment"): @material.comment</li>
+        </ul>
+    }
+}

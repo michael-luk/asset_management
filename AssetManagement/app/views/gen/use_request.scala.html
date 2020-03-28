@@ -1,0 +1,15 @@
+@(useRequestList: List[UseRequest]) @front_frame(TableInfoReader.getTableComment("UseRequest"), "UseRequestApp", "UseRequestController") {
+    @for(useRequest <- useRequestList) {
+        <ul>
+            <li>@TableInfoReader.getFieldComment("UseRequest", "id"): @useRequest.id</li>
+            <li>@TableInfoReader.getFieldComment("UseRequest", "name"): @useRequest.name</li>
+            <li>@TableInfoReader.getFieldComment("UseRequest", "content"): @useRequest.content</li>
+            <li>@TableInfoReader.getFieldComment("UseRequest", "status"): @EnumInfoReader.getEnumName("UseRequest", "status", useRequest.status)</li>
+            <li>@TableInfoReader.getFieldComment("UseRequest", "lastUpdateTime"): @LyLib.Utils.DateUtil.Date2Str(useRequest.lastUpdateTime)</li>
+            <li>@TableInfoReader.getFieldComment("UseRequest", "createdAt"): @LyLib.Utils.DateUtil.Date2Str(useRequest.createdAt)</li>
+            <li>@TableInfoReader.getFieldComment("UseRequest", "comment"): @useRequest.comment</li>
+            <li>@TableInfoReader.getFieldComment("UseRequest", "refMaterialId"): @useRequest.refMaterialId</li>
+            <li>@TableInfoReader.getFieldComment("UseRequest", "refUserId"): @useRequest.refUserId</li>
+        </ul>
+    }
+}

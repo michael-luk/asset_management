@@ -1,0 +1,686 @@
+2020-03-29 00:30:20,160 - [INFO] - from play in pool-13-thread-2 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9100
+
+2020-03-29 00:30:23 - [INFO] - from play 
+database [default] connected at jdbc:mysql://localhost:3306/asset_pro?useUnicode=true&characterEncoding=UTF-8
+
+2020-03-29 00:30:23 - [INFO] - from org.reflections.Reflections 
+Reflections took 86 ms to scan 2 urls, producing 30 keys and 122 values 
+
+2020-03-29 00:30:23 - [INFO] - from com.avaje.ebeaninternal.server.core.DefaultServerFactory 
+DatabasePlatform name:default platform:mysql
+
+2020-03-29 00:30:23 - [INFO] - from com.avaje.ebeaninternal.server.deploy.parse.DeployCreateProperties 
+trimming off 'is' from boolean field name isDefault in class models.Depart
+
+2020-03-29 00:30:23 - [INFO] - from com.avaje.ebeaninternal.server.deploy.parse.DeployCreateProperties 
+trimming off 'is' from boolean field name isDefault in class models.Member
+
+2020-03-29 00:30:23 - [INFO] - from com.avaje.ebeaninternal.server.deploy.parse.DeployCreateProperties 
+trimming off 'is' from boolean field name isEmailVerified in class models.User
+
+2020-03-29 00:30:23 - [INFO] - from com.avaje.ebeaninternal.server.deploy.parse.DeployCreateProperties 
+trimming off 'is' from boolean field name isDefault in class models.Auth
+
+2020-03-29 00:30:23 - [INFO] - from com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager 
+Entities enhanced[21]
+
+2020-03-29 00:30:23 - [WARN] - from com.avaje.ebeaninternal.server.ddl.CreateTableVisitor 
+Table name [user] is a suspected SQL reserved word for bean models.User
+
+2020-03-29 00:30:23 - [ERROR] - from application 
+
+
+! @7fa4l7o8d - Internal server error, for (GET) [/] ->
+
+play.api.db.evolutions.InvalidDatabaseRevision: Database 'default' needs evolution![An SQL script need to be run on your database.]
+	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1$$anonfun$apply$1.apply$mcV$sp(Evolutions.scala:510) ~[play-jdbc_2.11-2.3.8.jar:2.3.8]
+	at play.api.db.evolutions.EvolutionsPlugin.withLock(Evolutions.scala:531) ~[play-jdbc_2.11-2.3.8.jar:2.3.8]
+	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1.apply(Evolutions.scala:485) ~[play-jdbc_2.11-2.3.8.jar:2.3.8]
+	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1.apply(Evolutions.scala:483) ~[play-jdbc_2.11-2.3.8.jar:2.3.8]
+	at scala.collection.immutable.List.foreach(List.scala:383) ~[scala-library-2.11.1.jar:na]
+	at play.api.db.evolutions.EvolutionsPlugin.onStart(Evolutions.scala:483) ~[play-jdbc_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.collection.immutable.List.foreach(List.scala:383) ~[scala-library-2.11.1.jar:na]
+	at play.api.Play$$anonfun$start$1.apply$mcV$sp(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$start$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$start$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$.start(Play.scala:90) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:157) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:130) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:130) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:128) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.util.Success.flatMap(Try.scala:230) ~[scala-library-2.11.1.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:128) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.1.jar:na]
+
+2020-03-29 00:30:24 - [INFO] - from akka.event.slf4j.Slf4jLogger 
+Slf4jLogger started
+
+2020-03-29 00:30:27 - [INFO] - from application 
+Stopping tasks
+
+2020-03-29 00:30:27 - [INFO] - from application 
+Stopping tasks done
+
+2020-03-29 00:30:27 - [WARN] - from play 
+Error stopping plugin
+java.lang.NullPointerException: null
+	at play.libs.ws.ning.NingWSPlugin.onStop(NingWSPlugin.java:31) ~[play-java-ws_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1$$anonfun$apply$mcV$sp$2.apply(Play.scala:108) [play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1$$anonfun$apply$mcV$sp$2.apply(Play.scala:107) [play_2.11-2.3.8.jar:2.3.8]
+	at scala.collection.immutable.List.foreach(List.scala:383) [scala-library-2.11.1.jar:na]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply$mcV$sp(Play.scala:107) [play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply(Play.scala:107) [play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply(Play.scala:107) [play_2.11-2.3.8.jar:2.3.8]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) [play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$stop$1.apply(Play.scala:106) [play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$stop$1.apply(Play.scala:105) [play_2.11-2.3.8.jar:2.3.8]
+	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
+	at play.api.Play$.stop(Play.scala:105) [play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:142) [play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:130) [play_2.11-2.3.8.jar:2.3.8]
+	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:130) [play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:128) [play_2.11-2.3.8.jar:2.3.8]
+	at scala.util.Success.flatMap(Try.scala:230) [scala-library-2.11.1.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:128) [play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) [play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.1.jar:na]
+
+2020-03-29 00:30:27 - [INFO] - from com.jolbox.bonecp.BoneCP 
+Shutting down connection pool...
+
+2020-03-29 00:30:27 - [INFO] - from com.jolbox.bonecp.BoneCP 
+Connection pool has been shutdown.
+
+2020-03-29 00:30:27 - [INFO] - from play 
+database [default] connected at jdbc:mysql://localhost:3306/asset_pro?useUnicode=true&characterEncoding=UTF-8
+
+2020-03-29 00:30:27 - [INFO] - from org.reflections.Reflections 
+Reflections took 47 ms to scan 2 urls, producing 30 keys and 122 values 
+
+2020-03-29 00:30:27 - [INFO] - from com.avaje.ebeaninternal.server.core.DefaultServerFactory 
+DatabasePlatform name:default platform:mysql
+
+2020-03-29 00:30:27 - [INFO] - from com.avaje.ebeaninternal.server.deploy.parse.DeployCreateProperties 
+trimming off 'is' from boolean field name isDefault in class models.Depart
+
+2020-03-29 00:30:27 - [INFO] - from com.avaje.ebeaninternal.server.deploy.parse.DeployCreateProperties 
+trimming off 'is' from boolean field name isDefault in class models.Member
+
+2020-03-29 00:30:27 - [INFO] - from com.avaje.ebeaninternal.server.deploy.parse.DeployCreateProperties 
+trimming off 'is' from boolean field name isEmailVerified in class models.User
+
+2020-03-29 00:30:27 - [INFO] - from com.avaje.ebeaninternal.server.deploy.parse.DeployCreateProperties 
+trimming off 'is' from boolean field name isDefault in class models.Auth
+
+2020-03-29 00:30:27 - [INFO] - from com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager 
+Entities enhanced[21]
+
+2020-03-29 00:30:27 - [WARN] - from com.avaje.ebean.Ebean 
+Existing EbeanServer [default] is being replaced?
+
+2020-03-29 00:30:27 - [WARN] - from com.avaje.ebeaninternal.server.ddl.CreateTableVisitor 
+Table name [user] is a suspected SQL reserved word for bean models.User
+
+2020-03-29 00:30:28 - [INFO] - from application 
+System launched
+
+2020-03-29 00:30:28 - [INFO] - from application 
+start load custom config
+
+2020-03-29 00:30:28 - [INFO] - from application 
+start all custom config self check
+
+2020-03-29 00:30:28 - [INFO] - from application 
+load custom cfg 21
+
+2020-03-29 00:30:28 - [INFO] - from application 
+load custom cfg done
+
+2020-03-29 00:30:28 - [INFO] - from application 
+start load dummy data
+
+2020-03-29 00:30:28 - [INFO] - from application 
+load dummy default Admin 3
+
+2020-03-29 00:30:28 - [INFO] - from application 
+load dummy default Admin done
+
+2020-03-29 00:30:28 - [INFO] - from application 
+load dummy default AssetCard 3
+
+2020-03-29 00:30:28 - [INFO] - from application 
+load dummy default AssetCard done
+
+2020-03-29 00:30:28 - [INFO] - from application 
+load dummy default AssetHandle 3
+
+2020-03-29 00:30:28 - [INFO] - from application 
+load dummy default AssetHandle done
+
+2020-03-29 00:30:28 - [INFO] - from application 
+load dummy default AssetType 3
+
+2020-03-29 00:30:28 - [INFO] - from application 
+load dummy default AssetType done
+
+2020-03-29 00:30:28 - [INFO] - from application 
+load dummy default AssetUse 3
+
+2020-03-29 00:30:28 - [INFO] - from application 
+load dummy default AssetUse done
+
+2020-03-29 00:30:28 - [INFO] - from application 
+load dummy default Auth 3
+
+2020-03-29 00:30:28 - [INFO] - from application 
+load dummy default Auth done
+
+2020-03-29 00:30:28 - [INFO] - from application 
+load dummy default Barcode 3
+
+2020-03-29 00:30:28 - [INFO] - from application 
+load dummy default Barcode done
+
+2020-03-29 00:30:28 - [INFO] - from application 
+load dummy default Depart 3
+
+2020-03-29 00:30:28 - [INFO] - from application 
+load dummy default Depart done
+
+2020-03-29 00:30:28 - [INFO] - from application 
+load dummy default Dict 3
+
+2020-03-29 00:30:28 - [INFO] - from application 
+load dummy default Dict done
+
+2020-03-29 00:30:28 - [INFO] - from application 
+load dummy default FixRecord 3
+
+2020-03-29 00:30:28 - [INFO] - from application 
+load dummy default FixRecord done
+
+2020-03-29 00:30:28 - [INFO] - from application 
+load dummy default FixRequest 3
+
+2020-03-29 00:30:28 - [INFO] - from application 
+load dummy default FixRequest done
+
+2020-03-29 00:30:28 - [INFO] - from application 
+load dummy default Location 3
+
+2020-03-29 00:30:28 - [INFO] - from application 
+load dummy default Location done
+
+2020-03-29 00:30:28 - [INFO] - from application 
+load dummy default Material 3
+
+2020-03-29 00:30:28 - [INFO] - from application 
+load dummy default Material done
+
+2020-03-29 00:30:28 - [INFO] - from application 
+load dummy default Member 3
+
+2020-03-29 00:30:28 - [INFO] - from application 
+load dummy default Member done
+
+2020-03-29 00:30:28 - [INFO] - from application 
+load dummy default Purchase 3
+
+2020-03-29 00:30:28 - [INFO] - from application 
+load dummy default Purchase done
+
+2020-03-29 00:30:28 - [INFO] - from application 
+load dummy default User 3
+
+2020-03-29 00:30:28 - [INFO] - from application 
+load dummy default User done
+
+2020-03-29 00:30:28 - [INFO] - from application 
+load dummy default UseRequest 3
+
+2020-03-29 00:30:28 - [INFO] - from application 
+load dummy default UseRequest done
+
+2020-03-29 00:30:28 - [INFO] - from application 
+load admin cfg
+
+2020-03-29 00:30:28 - [INFO] - from application 
+use Mysql Database
+
+2020-03-29 00:30:28 - [INFO] - from application 
+weixin function is: false
+
+2020-03-29 00:30:28 - [INFO] - from application 
+sms captcha function is: false
+
+2020-03-29 00:30:28 - [INFO] - from application 
+load admin cfg done
+
+2020-03-29 00:30:28 - [INFO] - from play 
+Starting application default Akka system.
+
+2020-03-29 00:30:28 - [INFO] - from play 
+Application started (Dev)
+
+2020-03-29 00:31:13 - [INFO] - from application 
+GET: /admin | JSON: null
+
+2020-03-29 00:31:13 - [INFO] - from application 
+GET: /admin/admin | JSON: null
+
+2020-03-29 00:31:15 - [INFO] - from application 
+GET: /base/Admin/all?page=1&size=20&startTime=&endTime=&status=-100 | JSON: null
+
+2020-03-29 00:31:15 - [INFO] - from application 
+result: 3
+
+2020-03-29 00:31:25 - [INFO] - from application 
+GET: /admin/config | JSON: null
+
+2020-03-29 00:31:25 - [INFO] - from application 
+GET: /base/Config/all?page=1&size=20&startTime=&endTime= | JSON: null
+
+2020-03-29 00:31:25 - [INFO] - from application 
+result: 21
+
+2020-03-29 00:37:26 - [INFO] - from application 
+Stopping tasks
+
+2020-03-29 00:37:26 - [INFO] - from application 
+Stopping tasks done
+
+2020-03-29 00:37:26 - [INFO] - from play 
+Shutdown application default Akka system.
+
+2020-03-29 00:37:26 - [INFO] - from application 
+SYNC WEXIN USER EVERY DAY - NOT RUN
+
+2020-03-29 00:37:27 - [INFO] - from application 
+DB BACKUP EVERY DAY - NOT RUN
+
+2020-03-29 00:37:27 - [INFO] - from com.jolbox.bonecp.BoneCP 
+Shutting down connection pool...
+
+2020-03-29 00:37:27 - [INFO] - from com.jolbox.bonecp.BoneCP 
+Connection pool has been shutdown.
+
+2020-03-29 00:37:27 - [INFO] - from play 
+database [default] connected at jdbc:mysql://localhost:3306/asset_pro?useUnicode=true&characterEncoding=UTF-8
+
+2020-03-29 00:37:27 - [INFO] - from org.reflections.Reflections 
+Reflections took 60 ms to scan 2 urls, producing 30 keys and 122 values 
+
+2020-03-29 00:37:27 - [INFO] - from com.avaje.ebeaninternal.server.core.DefaultServerFactory 
+DatabasePlatform name:default platform:mysql
+
+2020-03-29 00:37:27 - [INFO] - from com.avaje.ebeaninternal.server.deploy.parse.DeployCreateProperties 
+trimming off 'is' from boolean field name isDefault in class models.Depart
+
+2020-03-29 00:37:27 - [INFO] - from com.avaje.ebeaninternal.server.deploy.parse.DeployCreateProperties 
+trimming off 'is' from boolean field name isDefault in class models.Member
+
+2020-03-29 00:37:27 - [INFO] - from com.avaje.ebeaninternal.server.deploy.parse.DeployCreateProperties 
+trimming off 'is' from boolean field name isEmailVerified in class models.User
+
+2020-03-29 00:37:27 - [INFO] - from com.avaje.ebeaninternal.server.deploy.parse.DeployCreateProperties 
+trimming off 'is' from boolean field name isDefault in class models.Auth
+
+2020-03-29 00:37:27 - [INFO] - from com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager 
+Entities enhanced[21]
+
+2020-03-29 00:37:27 - [WARN] - from com.avaje.ebean.Ebean 
+Existing EbeanServer [default] is being replaced?
+
+2020-03-29 00:37:27 - [WARN] - from com.avaje.ebeaninternal.server.ddl.CreateTableVisitor 
+Table name [user] is a suspected SQL reserved word for bean models.User
+
+2020-03-29 00:37:27 - [ERROR] - from application 
+
+
+! @7fa4m60p5 - Internal server error, for (GET) [/admin/config] ->
+
+play.api.db.evolutions.InvalidDatabaseRevision: Database 'default' needs evolution![An SQL script need to be run on your database.]
+	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1$$anonfun$apply$1.apply$mcV$sp(Evolutions.scala:510) ~[play-jdbc_2.11-2.3.8.jar:2.3.8]
+	at play.api.db.evolutions.EvolutionsPlugin.withLock(Evolutions.scala:531) ~[play-jdbc_2.11-2.3.8.jar:2.3.8]
+	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1.apply(Evolutions.scala:485) ~[play-jdbc_2.11-2.3.8.jar:2.3.8]
+	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1.apply(Evolutions.scala:483) ~[play-jdbc_2.11-2.3.8.jar:2.3.8]
+	at scala.collection.immutable.List.foreach(List.scala:383) ~[scala-library-2.11.1.jar:na]
+	at play.api.db.evolutions.EvolutionsPlugin.onStart(Evolutions.scala:483) ~[play-jdbc_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.collection.immutable.List.foreach(List.scala:383) ~[scala-library-2.11.1.jar:na]
+	at play.api.Play$$anonfun$start$1.apply$mcV$sp(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$start$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$start$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$.start(Play.scala:90) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:157) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:130) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:130) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:128) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.util.Success.flatMap(Try.scala:230) ~[scala-library-2.11.1.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:128) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.1.jar:na]
+
+2020-03-29 00:38:00 - [INFO] - from application 
+Stopping tasks
+
+2020-03-29 00:38:00 - [INFO] - from application 
+Stopping tasks done
+
+2020-03-29 00:38:00 - [WARN] - from play 
+Error stopping plugin
+java.lang.NullPointerException: null
+	at play.libs.ws.ning.NingWSPlugin.onStop(NingWSPlugin.java:31) ~[play-java-ws_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1$$anonfun$apply$mcV$sp$2.apply(Play.scala:108) [play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1$$anonfun$apply$mcV$sp$2.apply(Play.scala:107) [play_2.11-2.3.8.jar:2.3.8]
+	at scala.collection.immutable.List.foreach(List.scala:383) [scala-library-2.11.1.jar:na]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply$mcV$sp(Play.scala:107) [play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply(Play.scala:107) [play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply(Play.scala:107) [play_2.11-2.3.8.jar:2.3.8]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) [play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$stop$1.apply(Play.scala:106) [play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$stop$1.apply(Play.scala:105) [play_2.11-2.3.8.jar:2.3.8]
+	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
+	at play.api.Play$.stop(Play.scala:105) [play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:142) [play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:130) [play_2.11-2.3.8.jar:2.3.8]
+	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:130) [play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:128) [play_2.11-2.3.8.jar:2.3.8]
+	at scala.util.Success.flatMap(Try.scala:230) [scala-library-2.11.1.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:128) [play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) [play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.1.jar:na]
+
+2020-03-29 00:38:00 - [INFO] - from com.jolbox.bonecp.BoneCP 
+Shutting down connection pool...
+
+2020-03-29 00:38:00 - [INFO] - from com.jolbox.bonecp.BoneCP 
+Connection pool has been shutdown.
+
+2020-03-29 00:38:01 - [INFO] - from play 
+database [default] connected at jdbc:mysql://localhost:3306/asset_pro?useUnicode=true&characterEncoding=UTF-8
+
+2020-03-29 00:38:01 - [INFO] - from org.reflections.Reflections 
+Reflections took 38 ms to scan 2 urls, producing 30 keys and 122 values 
+
+2020-03-29 00:38:01 - [INFO] - from com.avaje.ebeaninternal.server.core.DefaultServerFactory 
+DatabasePlatform name:default platform:mysql
+
+2020-03-29 00:38:01 - [INFO] - from com.avaje.ebeaninternal.server.deploy.parse.DeployCreateProperties 
+trimming off 'is' from boolean field name isDefault in class models.Depart
+
+2020-03-29 00:38:01 - [INFO] - from com.avaje.ebeaninternal.server.deploy.parse.DeployCreateProperties 
+trimming off 'is' from boolean field name isDefault in class models.Member
+
+2020-03-29 00:38:01 - [INFO] - from com.avaje.ebeaninternal.server.deploy.parse.DeployCreateProperties 
+trimming off 'is' from boolean field name isEmailVerified in class models.User
+
+2020-03-29 00:38:01 - [INFO] - from com.avaje.ebeaninternal.server.deploy.parse.DeployCreateProperties 
+trimming off 'is' from boolean field name isDefault in class models.Auth
+
+2020-03-29 00:38:01 - [INFO] - from com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager 
+Entities enhanced[21]
+
+2020-03-29 00:38:01 - [WARN] - from com.avaje.ebean.Ebean 
+Existing EbeanServer [default] is being replaced?
+
+2020-03-29 00:38:01 - [WARN] - from com.avaje.ebeaninternal.server.ddl.CreateTableVisitor 
+Table name [user] is a suspected SQL reserved word for bean models.User
+
+2020-03-29 00:38:01 - [INFO] - from application 
+System launched
+
+2020-03-29 00:38:01 - [INFO] - from application 
+start load custom config
+
+2020-03-29 00:38:01 - [INFO] - from application 
+start all custom config self check
+
+2020-03-29 00:38:01 - [INFO] - from application 
+load custom cfg 21
+
+2020-03-29 00:38:01 - [INFO] - from application 
+load custom cfg done
+
+2020-03-29 00:38:01 - [INFO] - from application 
+start load dummy data
+
+2020-03-29 00:38:01 - [INFO] - from application 
+load dummy default Admin 3
+
+2020-03-29 00:38:01 - [INFO] - from application 
+load dummy default Admin done
+
+2020-03-29 00:38:01 - [INFO] - from application 
+load dummy default AssetCard 3
+
+2020-03-29 00:38:01 - [INFO] - from application 
+load dummy default AssetCard done
+
+2020-03-29 00:38:01 - [INFO] - from application 
+load dummy default AssetHandle 3
+
+2020-03-29 00:38:01 - [INFO] - from application 
+load dummy default AssetHandle done
+
+2020-03-29 00:38:01 - [INFO] - from application 
+load dummy default AssetType 3
+
+2020-03-29 00:38:01 - [INFO] - from application 
+load dummy default AssetType done
+
+2020-03-29 00:38:01 - [INFO] - from application 
+load dummy default AssetUse 3
+
+2020-03-29 00:38:01 - [INFO] - from application 
+load dummy default AssetUse done
+
+2020-03-29 00:38:01 - [INFO] - from application 
+load dummy default Auth 3
+
+2020-03-29 00:38:01 - [INFO] - from application 
+load dummy default Auth done
+
+2020-03-29 00:38:01 - [INFO] - from application 
+load dummy default Barcode 3
+
+2020-03-29 00:38:01 - [INFO] - from application 
+load dummy default Barcode done
+
+2020-03-29 00:38:01 - [INFO] - from application 
+load dummy default Depart 3
+
+2020-03-29 00:38:01 - [INFO] - from application 
+load dummy default Depart done
+
+2020-03-29 00:38:01 - [INFO] - from application 
+load dummy default Dict 3
+
+2020-03-29 00:38:01 - [INFO] - from application 
+load dummy default Dict done
+
+2020-03-29 00:38:01 - [INFO] - from application 
+load dummy default FixRecord 3
+
+2020-03-29 00:38:01 - [INFO] - from application 
+load dummy default FixRecord done
+
+2020-03-29 00:38:01 - [INFO] - from application 
+load dummy default FixRequest 3
+
+2020-03-29 00:38:01 - [INFO] - from application 
+load dummy default FixRequest done
+
+2020-03-29 00:38:01 - [INFO] - from application 
+load dummy default Location 3
+
+2020-03-29 00:38:01 - [INFO] - from application 
+load dummy default Location done
+
+2020-03-29 00:38:01 - [INFO] - from application 
+load dummy default Material 3
+
+2020-03-29 00:38:01 - [INFO] - from application 
+load dummy default Material done
+
+2020-03-29 00:38:01 - [INFO] - from application 
+load dummy default Member 3
+
+2020-03-29 00:38:01 - [INFO] - from application 
+load dummy default Member done
+
+2020-03-29 00:38:01 - [INFO] - from application 
+load dummy default Purchase 3
+
+2020-03-29 00:38:01 - [INFO] - from application 
+load dummy default Purchase done
+
+2020-03-29 00:38:01 - [INFO] - from application 
+load dummy default User 3
+
+2020-03-29 00:38:01 - [INFO] - from application 
+load dummy default User done
+
+2020-03-29 00:38:01 - [INFO] - from application 
+load dummy default UseRequest 3
+
+2020-03-29 00:38:01 - [INFO] - from application 
+load dummy default UseRequest done
+
+2020-03-29 00:38:01 - [INFO] - from application 
+load admin cfg
+
+2020-03-29 00:38:01 - [INFO] - from application 
+use Mysql Database
+
+2020-03-29 00:38:01 - [INFO] - from application 
+weixin function is: false
+
+2020-03-29 00:38:01 - [INFO] - from application 
+sms captcha function is: false
+
+2020-03-29 00:38:01 - [INFO] - from application 
+load admin cfg done
+
+2020-03-29 00:38:01 - [INFO] - from play 
+Starting application default Akka system.
+
+2020-03-29 00:38:01 - [INFO] - from play 
+Application started (Dev)
+
+2020-03-29 00:38:01 - [INFO] - from application 
+GET: /admin/config | JSON: null
+
+2020-03-29 00:38:02 - [INFO] - from application 
+GET: /base/Config/all?page=1&size=20&startTime=&endTime= | JSON: null
+
+2020-03-29 00:38:02 - [INFO] - from application 
+result: 21
+
+2020-03-29 00:53:00 - [INFO] - from application 
+GET: / | JSON: null
+
+2020-03-29 00:53:01 - [INFO] - from application 
+GET: /base/Admin/all?page=1&size=20&startTime=&endTime=&status=-100 | JSON: null
+
+2020-03-29 00:53:01 - [INFO] - from application 
+result: 3
+
+2020-03-29 00:53:04 - [INFO] - from application 
+GET: /admin/assetcard | JSON: null
+
+2020-03-29 00:53:05 - [INFO] - from application 
+GET: /base/AssetCard/all?page=1&size=10&startTime=&endTime= | JSON: null
+
+2020-03-29 00:53:05 - [INFO] - from application 
+result: 3
+
+2020-03-29 00:53:05 - [INFO] - from application 
+GET: /base/AssetCard/all?page=1&size=20&startTime=&endTime= | JSON: null
+
+2020-03-29 00:53:05 - [INFO] - from application 
+result: 3
+
+2020-03-29 00:53:05 - [INFO] - from application 
+GET: /showimg/thumb/2 | JSON: null
+
+2020-03-29 00:53:05 - [INFO] - from application 
+GET: /showimg/thumb/0 | JSON: null
+
+2020-03-29 00:53:05 - [INFO] - from application 
+GET: /showimg/thumb/1 | JSON: null
+
+2020-03-29 00:53:05 - [ERROR] - from application 
+找: thumb0ex: C:\Devs\AssetManagement\public\thumb\0 (系统找不到指定的文件。)
+
+2020-03-29 00:53:05 - [ERROR] - from application 
+找: thumb2ex: C:\Devs\AssetManagement\public\thumb\2 (系统找不到指定的文件。)
+
+2020-03-29 00:53:05 - [ERROR] - from application 
+找: thumb1ex: C:\Devs\AssetManagement\public\thumb\1 (系统找不到指定的文件。)
+
+2020-03-29 00:53:07 - [INFO] - from application 
+GET: /admin/assethandle | JSON: null
+
+2020-03-29 00:53:07 - [INFO] - from application 
+GET: /base/AssetHandle/all?page=1&size=20&startTime=&endTime=&status=-100 | JSON: null
+
+2020-03-29 00:53:07 - [INFO] - from application 
+result: 3
+
+2020-03-29 00:56:10 - [INFO] - from application 
+Stopping tasks
+
+2020-03-29 00:56:11 - [INFO] - from application 
+Stopping tasks done
+
+2020-03-29 00:56:11 - [INFO] - from play 
+Shutdown application default Akka system.
+
+2020-03-29 00:56:11 - [INFO] - from application 
+SYNC WEXIN USER EVERY DAY - NOT RUN
+
+2020-03-29 00:56:11 - [INFO] - from application 
+DB BACKUP EVERY DAY - NOT RUN
+
+2020-03-29 00:56:11 - [INFO] - from com.jolbox.bonecp.BoneCP 
+Shutting down connection pool...
+
+2020-03-29 00:56:11 - [INFO] - from com.jolbox.bonecp.BoneCP 
+Connection pool has been shutdown.
+

@@ -1,0 +1,14 @@
+@(purchaseList: List[Purchase]) @front_frame(TableInfoReader.getTableComment("Purchase"), "PurchaseApp", "PurchaseController") {
+    @for(purchase <- purchaseList) {
+        <ul>
+            <li>@TableInfoReader.getFieldComment("Purchase", "id"): @purchase.id</li>
+            <li>@TableInfoReader.getFieldComment("Purchase", "name"): @purchase.name</li>
+            <li>@TableInfoReader.getFieldComment("Purchase", "content"): @purchase.content</li>
+            <li>@TableInfoReader.getFieldComment("Purchase", "lastUpdateTime"): @LyLib.Utils.DateUtil.Date2Str(purchase.lastUpdateTime)</li>
+            <li>@TableInfoReader.getFieldComment("Purchase", "createdAt"): @LyLib.Utils.DateUtil.Date2Str(purchase.createdAt)</li>
+            <li>@TableInfoReader.getFieldComment("Purchase", "comment"): @purchase.comment</li>
+            <li>@TableInfoReader.getFieldComment("Purchase", "refMaterialId"): @purchase.refMaterialId</li>
+            <li>@TableInfoReader.getFieldComment("Purchase", "refUserId"): @purchase.refUserId</li>
+        </ul>
+    }
+}

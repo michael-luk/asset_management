@@ -1,0 +1,14 @@
+@(fixRequestList: List[FixRequest]) @front_frame(TableInfoReader.getTableComment("FixRequest"), "FixRequestApp", "FixRequestController") {
+    @for(fixRequest <- fixRequestList) {
+        <ul>
+            <li>@TableInfoReader.getFieldComment("FixRequest", "id"): @fixRequest.id</li>
+            <li>@TableInfoReader.getFieldComment("FixRequest", "name"): @fixRequest.name</li>
+            <li>@TableInfoReader.getFieldComment("FixRequest", "content"): @fixRequest.content</li>
+            <li>@TableInfoReader.getFieldComment("FixRequest", "status"): @EnumInfoReader.getEnumName("FixRequest", "status", fixRequest.status)</li>
+            <li>@TableInfoReader.getFieldComment("FixRequest", "lastUpdateTime"): @LyLib.Utils.DateUtil.Date2Str(fixRequest.lastUpdateTime)</li>
+            <li>@TableInfoReader.getFieldComment("FixRequest", "createdAt"): @LyLib.Utils.DateUtil.Date2Str(fixRequest.createdAt)</li>
+            <li>@TableInfoReader.getFieldComment("FixRequest", "comment"): @fixRequest.comment</li>
+            <li>@TableInfoReader.getFieldComment("FixRequest", "refUserId"): @fixRequest.refUserId</li>
+        </ul>
+    }
+}

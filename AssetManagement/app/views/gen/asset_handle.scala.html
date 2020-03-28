@@ -1,0 +1,12 @@
+@(assetHandleList: List[AssetHandle]) @front_frame(TableInfoReader.getTableComment("AssetHandle"), "AssetHandleApp", "AssetHandleController") {
+    @for(assetHandle <- assetHandleList) {
+        <ul>
+            <li>@TableInfoReader.getFieldComment("AssetHandle", "id"): @assetHandle.id</li>
+            <li>@TableInfoReader.getFieldComment("AssetHandle", "name"): @assetHandle.name</li>
+            <li>@TableInfoReader.getFieldComment("AssetHandle", "status"): @EnumInfoReader.getEnumName("AssetHandle", "status", assetHandle.status)</li>
+            <li>@TableInfoReader.getFieldComment("AssetHandle", "lastUpdateTime"): @LyLib.Utils.DateUtil.Date2Str(assetHandle.lastUpdateTime)</li>
+            <li>@TableInfoReader.getFieldComment("AssetHandle", "createdAt"): @LyLib.Utils.DateUtil.Date2Str(assetHandle.createdAt)</li>
+            <li>@TableInfoReader.getFieldComment("AssetHandle", "comment"): @assetHandle.comment</li>
+        </ul>
+    }
+}

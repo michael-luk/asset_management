@@ -1,0 +1,12 @@
+@(assetCardList: List[AssetCard]) @front_frame(TableInfoReader.getTableComment("AssetCard"), "AssetCardApp", "AssetCardController") {
+    @for(assetCard <- assetCardList) {
+        <ul>
+            <li>@TableInfoReader.getFieldComment("AssetCard", "id"): @assetCard.id</li>
+            <li>@TableInfoReader.getFieldComment("AssetCard", "name"): @assetCard.name</li>
+            <li>@TableInfoReader.getFieldComment("AssetCard", "images"): @assetCard.images</li>
+            <li>@TableInfoReader.getFieldComment("AssetCard", "lastUpdateTime"): @LyLib.Utils.DateUtil.Date2Str(assetCard.lastUpdateTime)</li>
+            <li>@TableInfoReader.getFieldComment("AssetCard", "createdAt"): @LyLib.Utils.DateUtil.Date2Str(assetCard.createdAt)</li>
+            <li>@TableInfoReader.getFieldComment("AssetCard", "comment"): @assetCard.comment</li>
+        </ul>
+    }
+}

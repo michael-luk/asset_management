@@ -1,0 +1,13 @@
+@(departList: List[Depart]) @front_frame(TableInfoReader.getTableComment("Depart"), "DepartApp", "DepartController") {
+    @for(depart <- departList) {
+        <ul>
+            <li>@TableInfoReader.getFieldComment("Depart", "id"): @depart.id</li>
+            <li>@TableInfoReader.getFieldComment("Depart", "isDefault"): @depart.isDefault</li>
+            <li>@TableInfoReader.getFieldComment("Depart", "name"): @depart.name</li>
+            <li>@TableInfoReader.getFieldComment("Depart", "code"): @depart.code</li>
+            <li>@TableInfoReader.getFieldComment("Depart", "lastUpdateTime"): @LyLib.Utils.DateUtil.Date2Str(depart.lastUpdateTime)</li>
+            <li>@TableInfoReader.getFieldComment("Depart", "createdAt"): @LyLib.Utils.DateUtil.Date2Str(depart.createdAt)</li>
+            <li>@TableInfoReader.getFieldComment("Depart", "comment"): @depart.comment</li>
+        </ul>
+    }
+}

@@ -1,0 +1,13 @@
+@(memberList: List[Member]) @front_frame(TableInfoReader.getTableComment("Member"), "MemberApp", "MemberController") {
+    @for(member <- memberList) {
+        <ul>
+            <li>@TableInfoReader.getFieldComment("Member", "id"): @member.id</li>
+            <li>@TableInfoReader.getFieldComment("Member", "isDefault"): @member.isDefault</li>
+            <li>@TableInfoReader.getFieldComment("Member", "name"): @member.name</li>
+            <li>@TableInfoReader.getFieldComment("Member", "code"): @member.code</li>
+            <li>@TableInfoReader.getFieldComment("Member", "lastUpdateTime"): @LyLib.Utils.DateUtil.Date2Str(member.lastUpdateTime)</li>
+            <li>@TableInfoReader.getFieldComment("Member", "createdAt"): @LyLib.Utils.DateUtil.Date2Str(member.createdAt)</li>
+            <li>@TableInfoReader.getFieldComment("Member", "comment"): @member.comment</li>
+        </ul>
+    }
+}

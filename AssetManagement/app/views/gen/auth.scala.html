@@ -1,0 +1,13 @@
+@(authList: List[Auth]) @front_frame(TableInfoReader.getTableComment("Auth"), "AuthApp", "AuthController") {
+    @for(auth <- authList) {
+        <ul>
+            <li>@TableInfoReader.getFieldComment("Auth", "id"): @auth.id</li>
+            <li>@TableInfoReader.getFieldComment("Auth", "isDefault"): @auth.isDefault</li>
+            <li>@TableInfoReader.getFieldComment("Auth", "name"): @auth.name</li>
+            <li>@TableInfoReader.getFieldComment("Auth", "code"): @auth.code</li>
+            <li>@TableInfoReader.getFieldComment("Auth", "lastUpdateTime"): @LyLib.Utils.DateUtil.Date2Str(auth.lastUpdateTime)</li>
+            <li>@TableInfoReader.getFieldComment("Auth", "createdAt"): @LyLib.Utils.DateUtil.Date2Str(auth.createdAt)</li>
+            <li>@TableInfoReader.getFieldComment("Auth", "comment"): @auth.comment</li>
+        </ul>
+    }
+}

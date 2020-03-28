@@ -1,0 +1,12 @@
+@(dictList: List[Dict]) @front_frame(TableInfoReader.getTableComment("Dict"), "DictApp", "DictController") {
+    @for(dict <- dictList) {
+        <ul>
+            <li>@TableInfoReader.getFieldComment("Dict", "id"): @dict.id</li>
+            <li>@TableInfoReader.getFieldComment("Dict", "name"): @dict.name</li>
+            <li>@TableInfoReader.getFieldComment("Dict", "code"): @dict.code</li>
+            <li>@TableInfoReader.getFieldComment("Dict", "lastUpdateTime"): @LyLib.Utils.DateUtil.Date2Str(dict.lastUpdateTime)</li>
+            <li>@TableInfoReader.getFieldComment("Dict", "createdAt"): @LyLib.Utils.DateUtil.Date2Str(dict.createdAt)</li>
+            <li>@TableInfoReader.getFieldComment("Dict", "comment"): @dict.comment</li>
+        </ul>
+    }
+}
